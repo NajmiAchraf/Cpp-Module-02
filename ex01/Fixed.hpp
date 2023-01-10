@@ -9,6 +9,9 @@ class	Fixed {
 
 public:
 
+	int		getRawBits(void) const;
+	void	setRawBits(int const rawBits);
+
 	Fixed(void);
 	Fixed(int const newValue);
 	Fixed(float const newValue);
@@ -16,12 +19,8 @@ public:
 	~Fixed(void);
 	Fixed & operator = (Fixed const &fixed);
 
-	int		getRawBits(void) const;
-	void	setRawBits(int const rawBits);
-
 	int		toInt(void) const;
 	float	toFloat(void) const;
-
 
 private:
 
