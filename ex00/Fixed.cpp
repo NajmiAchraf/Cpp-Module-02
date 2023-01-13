@@ -13,18 +13,18 @@ Fixed::Fixed(void) : _fixedPointValue(0) {
 	std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(Fixed const &fixed) {
+Fixed::Fixed(Fixed const &copyFixed) {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = fixed;
-	this->_fixedPointValue = fixed.getRawBits();
+	*this = copyFixed;
+	this->_fixedPointValue = copyFixed.getRawBits();
 }
 
 Fixed::~Fixed(void) {
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed	&Fixed::operator = (Fixed const &fixed) {
+Fixed	&Fixed::operator = (Fixed const &assignFixed) {
 	std::cout << "Copy assignation operator called" << std::endl;
-	this->_fixedPointValue = fixed.getRawBits();
+	this->_fixedPointValue = assignFixed.getRawBits();
 	return (*this);
 }

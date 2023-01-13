@@ -6,20 +6,18 @@
 
 class	Fixed {
 
+	int					_fixedPointValue;
+	static const int	_fractionalBits = 8;
+
 public:
 
 	int		getRawBits(void) const;
 	void	setRawBits(int const rawBits);
 
 	Fixed(void);
-	Fixed(Fixed const &fixed);
+	Fixed(Fixed const &copyFixed);
 	~Fixed(void);
-	Fixed & operator = (Fixed const &fixed);
-
-private:
-
-	int					_fixedPointValue;
-	static const int	_fractionalBits = 8;
+	Fixed & operator = (Fixed const &assignFixed);
 
 };
 
