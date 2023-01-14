@@ -18,15 +18,15 @@ public:
 	Fixed(void);
 	Fixed(int const newValue);
 	Fixed(float const newValue);
-	Fixed(Fixed const &copyFixed);
+	Fixed(Fixed const &fixed);
 	~Fixed(void);
-	Fixed & operator = (Fixed const &assignFixed);
+	Fixed & operator = (Fixed const &fixed);
 
 	int		toInt(void) const;
 	float	toFloat(void) const;
 
 };
 
-std::ostream & operator << (std::ostream &out, Fixed const &fixed);
+std::ostream & operator << (std::ostream &output, Fixed const &fixed);
 
 #endif
