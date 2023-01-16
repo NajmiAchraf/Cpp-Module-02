@@ -72,7 +72,7 @@ Fixed	Fixed::operator ++ (int) {
 }
 
 Fixed	&Fixed::operator -- (void) {
-	thid->_frixedPointValue--;
+	this->_fixedPointValue--;
 	return(*this);
 }
 
@@ -111,6 +111,14 @@ Fixed	&Fixed::min(Fixed &fixed1, Fixed &fixed2) {
 }
 
 Fixed	&Fixed::max(Fixed &fixed1, Fixed &fixed2) {
+	return (fixed1 > fixed2 ? fixed1 : fixed2);
+}
+
+Fixed const	&Fixed::min(Fixed const &fixed1, Fixed const &fixed2) {
+	return (fixed1 < fixed2 ? fixed1 : fixed2);
+}
+
+Fixed const	&Fixed::max(Fixed const &fixed1, Fixed const &fixed2) {
 	return (fixed1 > fixed2 ? fixed1 : fixed2);
 }
 

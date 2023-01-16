@@ -30,10 +30,10 @@ public:
 	Fixed	operator * (Fixed const &fixed) const;
 	Fixed	operator / (Fixed const &fixed) const;
 
-	Fixed &	operator ++ (void);
 	Fixed	operator ++ (int);
-	Fixed &	operator -- (void);
 	Fixed	operator -- (int);
+	Fixed	&operator ++ (void);
+	Fixed	&operator -- (void);
 
 	bool	operator > (Fixed const &fixed) const;
 	bool	operator < (Fixed const &fixed) const;
@@ -46,8 +46,6 @@ public:
 	static Fixed		&max(Fixed &fixed1, Fixed &fixed2);
 	static Fixed const	&min(Fixed const &fixed1, Fixed const &fixed2);
 	static Fixed const	&max(Fixed const &fixed1, Fixed const &fixed2);
-
-
 
 };
 
